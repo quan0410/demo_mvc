@@ -1,18 +1,18 @@
-# connection.php
+
 
 <?php
 class DB
 {
-    private static $instance = NULl;
-    public static function getInstance() {
-      if (!isset(self::$instance)) {
+    private static $connect = NULL;
+    public static function getConnect() {
+      if (!isset(self::$connect)) {
         try {
-          self::$instance = new PDO('mysql:host=localhost;dbname=demo_mvc', 'root', '');
-          self::$instance->exec("SET NAMES 'utf8'");
+          self::$connect = new PDO('mysql:host=localhost;dbname=demo_mvc', 'root', '');
+          self::$connect->exec("SET NAMES 'utf8'");
         } catch (PDOException $ex) {
           die($ex->getMessage());
         }
       }
-      return self::$instance;
+      return self::$connect;
     }
 }

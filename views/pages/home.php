@@ -1,5 +1,9 @@
-# views/pages/home.php
+
 
 <?php
-  echo "Tên tôi là: $name, năm nay tôi $age tuổi";
+echo"<br>";
+echo"<br>";
+echo"<br>";
+  echo "<h2> MOTO </h2>";
 ?>
+hello
